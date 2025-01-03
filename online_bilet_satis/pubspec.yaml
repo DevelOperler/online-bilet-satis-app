@@ -30,14 +30,31 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  dio: any                  # RESTful API için
+  workmanager: ^0.5.0
+  shared_preferences: any   # Kullanıcı tercihleri için
+  hive: ^2.2.3                 # Lokal veritabanı için
+  hive_flutter: ^1.1.0         # Hive için Flutter entegrasyonu
+  flutter_local_notifications: ^17.2.1  # Bildirimler için
+  geolocator: any           # Konum verileri için
+  provider: any            # State management için
+  flutter_background: any   # Arka plan işlemleri için
+  connectivity_plus: ^6.1.1    # Ağ durumu kontrolü
+  jwt_decoder: any          # Token doğrulama işlemleri için
+  path_provider: any        # Dosya depolama için
+  intl: any
+  timezone: any                # Tarih ve saat işlemleri için
+  permission_handler: ^11.1.0
+  http: any # API işlemleri için
+  flutter_secure_storage: any # Token saklama
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  hive_generator: ^1.1.3
+  build_runner: any
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
