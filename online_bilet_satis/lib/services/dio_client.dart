@@ -8,7 +8,8 @@ class DioClient {
   DioClient() {
     _dio = Dio(
       BaseOptions(
-        baseUrl: 'http://10.0.2.2:8080/api/', // API'nin temel URL'si
+        // baseUrl: 'http://10.0.2.2:8080/api/', // API'nin temel URL'si
+        baseUrl: 'http://backend:8080/api/', // API'nin temel URL'si
         connectTimeout: const Duration(seconds: 10),
         receiveTimeout: const Duration(seconds: 10),
       ),

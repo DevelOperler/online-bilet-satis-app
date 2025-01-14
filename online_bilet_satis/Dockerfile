@@ -1,20 +1,20 @@
-# Flutter için Base Image
-FROM cirrusci/flutter:stable AS build
+# Flutter için temel imaj
+FROM ghcr.io/cirruslabs/flutter:stable AS build
 
 # Çalışma dizinini ayarla
 WORKDIR /app
 
-# Bağımlılıkları yükle
+# Bağımlılık dosyalarını kopyala ve bağımlılıkları yükle
 COPY pubspec.* ./
 RUN flutter pub get
 
 # Uygulama kaynaklarını kopyala
 COPY . .
 
-# Release build al
-RUN flutter build web
+# Web için release build al
+RUN flutter build web --release
 
-# Web server için Base Image
+# NGINX için temel imaj
 FROM nginx:alpine
 
 # Flutter build çıktılarını NGINX'e kopyala

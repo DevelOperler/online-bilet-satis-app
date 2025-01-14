@@ -7,9 +7,9 @@ services:
     ports:
       - "8081:80" # Flutter uygulamasına erişmek için
     depends_on:
-      - go-backend
+      - backend
 
-  go-backend:
+  backend:
     build:
       context: ./mobil-backend # Go uygulamanın bulunduğu dizin
       dockerfile: Dockerfile
